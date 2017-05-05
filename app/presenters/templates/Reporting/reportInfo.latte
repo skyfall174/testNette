@@ -1,0 +1,12 @@
+{block content} 
+{default $i = 0}
+{print_r($items_info)}
+<br>
+    {foreach $items_info as $item}
+        {print_r($item)}
+        <br>
+        
+        {control reportInfo-$i $item}
+        {var $i = $i+1}
+        
+    {/foreach}

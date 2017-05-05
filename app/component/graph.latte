@@ -1,0 +1,12 @@
+{default $id = "graph"}
+
+<div class="col-md-4 col-md-offset-4">
+    <canvas id="{$id}" width="100px" height="100px"></canvas>
+</div>
+
+<script>
+    $(document).ready(function () {
+        var ctx_graph_{$id|noescape} = document.getElementById({$id}).getContext("2d");
+        var graph_{$id|noescape} = new Chart(ctx_graph_{$id|noescape}, {$data|noescape});
+    });
+</script>
